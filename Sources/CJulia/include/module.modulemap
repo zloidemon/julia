@@ -1,0 +1,5 @@
+module CJulia [system] {
+    header "include.h"
+    link "julia"
+    export *
+}
