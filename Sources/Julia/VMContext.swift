@@ -2,7 +2,9 @@ import CJulia
 
 public class VMContext {
     public init() {
-        _jl_init()
+        if jl_is_initialized() == 0 {
+            _jl_init()
+        }
     }
 
     deinit {
